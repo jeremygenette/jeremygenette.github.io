@@ -1,0 +1,8 @@
+/.quarto/
+/_freeze/
+.Rproj.user/
+.Rhistory
+.RData
+.Ruserdata
+*.rdb
+*.rdx

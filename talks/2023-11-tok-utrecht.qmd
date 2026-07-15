@@ -1,0 +1,6 @@
+---
+title: "Speech physiology or perceptual enhancement? Exploring Intrinsic Vowel F0 in children with hearing impairment"
+subtitle: "Taalontwikkeling Kinderen (NL/VL) dag, Utrecht, NL — Conference presentation"
+date: 2023-11-01
+categories: [Presentation, Intrinsic Vowel Pitch, Hearing impairment]
+---

@@ -1,0 +1,9 @@
+---
+title: "Stable Vowel Corpus (SVC)"
+author: "Jérémy Genette, Steven Gillis, Jo Verhoeven"
+subtitle: "A benchmark for spectral stability analyses"
+date: 2023-01-01
+categories: [dataset, speech acoustics, vowels, spectral stability, corpus]
+---
+
+Genette, J., Gillis, S., & Verhoeven, J. (2023). *Stable Vowel Corpus (SVC): A benchmark for spectral stability analyses* \[Data set\]. Zenodo. https://doi.org/10.5281/zenodo.10228174

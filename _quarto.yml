@@ -1,0 +1,66 @@
+project:
+  type: website
+  output-dir: docs                 # GitHub Pages can serve straight from /docs on main
+  render:
+    - "*.qmd"
+    - "!R/"
+    - "!cv-pdf.qmd"   # rendered on demand by R/build_cv_pdf.R -> assets/cv.pdf, not part of the normal site build
+
+website:
+  title: "Jérémy Genette"
+  description: "Academic website of Jérémy Genette — Phonetician and linguist."
+  site-url: "https://jeremygenette.github.io"
+  favicon: assets/img/photo.jpg   # swap for a proper favicon.png later
+  google-analytics: ""             # optional: add a GA4 id
+  open-graph: true                 # nice social-media preview cards (improvement over the Jekyll site)
+  twitter-card: true
+  page-navigation: true
+  navbar:
+    logo: assets/img/photo.jpg
+    left:
+      - href: index.qmd
+        text: Home
+      - href: cv.qmd
+        text: CV
+      - href: publications.qmd
+        text: Publications
+      - href: projects.qmd
+        text: Projects
+      - href: teaching.qmd
+        text: Teaching
+      - href: talks.qmd
+        text: Talks
+      - href: service.qmd
+        text: Service
+      - href: contact.qmd
+        text: Contact
+    right:
+      - icon: github
+        href: https://github.com/jeremygenette
+      - icon: envelope
+        href: mailto:yourname@university.edu
+
+  page-footer:
+    left: "© {{< now year >}} Jérémy Genette"
+    right:
+      - icon: github
+        href: https://github.com/jeremygenette/jeremygenette.github.io
+        text: Source
+
+  sidebar: false
+
+format:
+  html:
+    theme: [flatly, styles.scss]
+    css: styles-extra.css
+    html-math-method: katex   # avoids MathJax's polyfill.io dependency entirely
+    toc: false
+    grid:
+      body-width: 950px
+    fontsize: 1rem
+    linkcolor: "#E8600A"
+    code-copy: true
+    smooth-scroll: true
+
+execute:
+  freeze: auto                     # cache renders; big speed win for CI publishing

@@ -1,0 +1,202 @@
+---
+title: ""
+format:
+  pdf:
+    documentclass: article
+    geometry: "a4paper,margin=1in"
+    fontsize: 10pt
+    include-in-header:
+      text: |
+        \usepackage{tipa}
+        \usepackage{fontawesome5}
+        \usepackage{academicons}
+        \usepackage{xcolor}
+        \usepackage{xurl}
+        \usepackage{wrapfig}
+        \usepackage{longtable}
+        \usepackage{graphicx}
+        \renewcommand*{\arraystretch}{1.15}
+        \setlength{\bibitemsep}{0.6\baselineskip}
+    keep-tex: false
+execute:
+  echo: false
+  warning: false
+  message: false
+---
+
+```{r}
+#| include: false
+source("R/cv_helpers.R")
+library(glue)
+cv <- yaml::read_yaml("_data/cv_data.yml")
+publications <- read_collection("publications")
+talks        <- read_collection("talks")
+invited      <- talks[has_category(talks$categories, "Invited talk"), ]
+presentations<- talks[!has_category(talks$categories, "Invited talk"), ]
+teaching     <- read_collection("teaching")
+
+email2 <- if (length(cv$emails) > 1) {
+  glue(" and \\href{{mailto:{cv$emails[[2]]}}}{{{cv$emails[[2]]}}}")
+} else ""
+```
+
+```{=latex}
+\begin{wrapfigure}{r}{0.22\textwidth}
+    \vspace{-10pt}
+    \includegraphics[width=\linewidth, height=3.6cm]{assets/img/photo.jpg}
+\end{wrapfigure}
+\noindent
+```
+\textbf{\Large `r toupper(cv$name)`}\
+\textipa{`r cv$ipa`}\
+
+\faEnvelope\ \href{mailto:`r cv$emails[[1]]`}{`r cv$emails[[1]]`}`r email2`\
+```{=latex}
+\hypersetup{colorlinks=true, linkcolor=blue, urlcolor=blue}
+```
+\small
+\aiResearchGateSquare\ \href{`r cv$links$researchgate`}{ResearchGate}\
+\aiGoogleScholarSquare\ \href{`r cv$links$scholar`}{Google Scholar}\
+\aiOrcid\ \href{`r cv$links$orcid`}{ORCID}
+```{=latex}
+\vspace{2mm}
+\hypersetup{colorlinks=true, linkcolor=black, urlcolor=black}
+\normalsize
+
+\section*{Education}
+\hrule\vspace{5mm}
+\small
+\begin{longtable}{@{}p{3cm} p{12cm}@{}}
+```
+```{r}
+#| output: asis
+latex_block_rows(cv$education)
+```
+```{=latex}
+\end{longtable}
+
+\section*{Academic positions}
+\hrule\vspace{5mm}
+\begin{longtable}{@{}p{3cm} p{12cm}@{}}
+```
+```{r}
+#| output: asis
+latex_block_rows(cv$positions)
+```
+```{=latex}
+\end{longtable}
+
+\section*{Publications}
+\hrule\vspace{5mm}
+\begin{longtable}{@{}p{3cm} p{12cm}@{}}
+```
+```{r}
+#| output: asis
+latex_collection_rows(publications)
+```
+```{=latex}
+\end{longtable}
+
+\section*{Invited talks}
+\hrule\vspace{5mm}
+\begin{longtable}{@{}p{3cm} p{12cm}@{}}
+```
+```{r}
+#| output: asis
+latex_collection_rows(invited)
+```
+```{=latex}
+\end{longtable}
+
+\section*{Teaching}
+\hrule\vspace{5mm}
+\begin{longtable}{p{3cm}p{12cm}}
+```
+```{r}
+#| output: asis
+latex_collection_rows(teaching)
+```
+```{=latex}
+\end{longtable}
+
+\section*{Presentations}
+\hrule\vspace{5mm}
+\begin{longtable}{@{}p{3cm} p{12cm}@{}}
+```
+```{r}
+#| output: asis
+latex_collection_rows(presentations)
+```
+```{=latex}
+\end{longtable}
+
+\section*{Awards}
+\hrule\vspace{5mm}
+\begin{longtable}{@{}p{3cm} p{12cm}@{}}
+```
+```{r}
+#| output: asis
+latex_block_rows(cv$awards)
+```
+```{=latex}
+\end{longtable}
+
+\section*{Grants}
+\hrule\vspace{5mm}
+\begin{longtable}{@{}p{3cm} p{12cm}@{}}
+```
+```{r}
+#| output: asis
+latex_block_rows(cv$grants)
+```
+```{=latex}
+\end{longtable}
+
+\section*{Skills}
+\hrule\vspace{5mm}
+\begin{longtable}{p{12cm}}
+```
+```{r}
+#| output: asis
+cat(sprintf("\\textbf{IT} \\\\\nAdvanced: %s \\\\\nIntermediate: %s \\\\\n\\\\\n",
+            latex_escape(paste(cv$skills$it_advanced, collapse = ", ")),
+            latex_escape(paste(cv$skills$it_intermediate, collapse = ", "))))
+cat("\\textbf{Languages} \\\\\n")
+for (l in cv$skills$languages) cat(sprintf("%s: %s \\\\\n", l$language, l$level))
+```
+```{=latex}
+\end{longtable}
+
+\section*{Additional training}
+\hrule\vspace{5mm}
+\begin{longtable}{@{}p{3cm} p{12cm}@{}}
+```
+```{r}
+#| output: asis
+latex_block_rows(cv$training)
+```
+```{=latex}
+\end{longtable}
+
+\section*{Scientific affiliations}
+\hrule\vspace{5mm}
+```
+```{r}
+#| output: asis
+cat(latex_escape(paste(unlist(cv$affiliations), collapse = ", ")))
+```
+```{=latex}
+\section*{References}
+\hrule\vspace{5mm}
+\begin{longtable}{@{}p{4cm} p{6cm} p{5cm}@{}}
+```
+```{r}
+#| output: asis
+for (r in cv$references) {
+  cat(sprintf("\\textbf{%s} & %s & %s \\\\\n",
+              latex_escape(r$name), latex_escape(r$place), r$email))
+}
+```
+```{=latex}
+\end{longtable}
+```

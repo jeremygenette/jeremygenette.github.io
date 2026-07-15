@@ -1,0 +1,8 @@
+---
+title: "Phonetics and Phonology Seminar — guest lecture: \"Intrinsic Vowel Pitch in Children\""
+subtitle: "Universität Mannheim, DE — Guest lecture, undergraduate level"
+date: 2024-05-08
+categories: [Phonetics, Guest lecture, Undergraduate]
+---
+
+The acoustic analysis of a child speech corpus. 8 May 2024.

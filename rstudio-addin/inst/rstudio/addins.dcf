@@ -1,0 +1,9 @@
+Name: Build & Publish Site
+Description: Render the Quarto site and push it to GitHub with gert
+Binding: addin_publish_site
+Interactive: true
+
+Name: New Site Entry
+Description: Scaffold a new publication / talk / course / service / project entry
+Binding: addin_new_entry
+Interactive: true

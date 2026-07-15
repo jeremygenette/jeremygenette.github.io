@@ -1,0 +1,10 @@
+---
+title: "Project Title"
+subtitle: "Funded Project · 2023–present"
+date: 2023-01-01
+categories: [Keyword]
+---
+
+Brief description of this research project — its goals, funding source, and current status.
+
+[Website](https://example.com) · [GitHub](https://github.com/)

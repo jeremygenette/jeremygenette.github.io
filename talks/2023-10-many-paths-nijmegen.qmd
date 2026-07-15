@@ -1,0 +1,6 @@
+---
+title: "Exploring individual differences in dual pathways to the vowel height contrast: the f0 and F1 routes"
+subtitle: "Many Paths to Language, Nijmegen, NL — Conference presentation"
+date: 2023-10-01
+categories: [Presentation, Vowels, Individual differences]
+---

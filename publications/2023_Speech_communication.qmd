@@ -1,0 +1,11 @@
+      
+---
+title: "Determining spectral stability in vowels"
+author: "Jérémy Genette, J. M. Rivera Espejo, Steven Gillis, Jo Verhoeven"
+subtitle: "A comparison and assessment of different metrics"
+date: 2023-01-01
+categories: [speech acoustics, vowels, spectral stability, Speech Communication, phonetics]
+---
+
+
+**Genette, J.**, Rivera Espejo, J. M., Gillis, S., & Verhoeven, J. (2023). Determining spectral stability in vowels: A comparison and assessment of different metrics. *Speech Communication, 154*, 102984. <https://doi.org/10.1016/j.specom.2023.102984>

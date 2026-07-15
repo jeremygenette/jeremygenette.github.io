@@ -1,0 +1,9 @@
+---
+title: "Fundamental frequency normalization and statistical power"
+author: "Jérémy Genette, Jo Verhoeven, Steven Gillis"
+subtitle: "An assessment of 15 normalizing techniques"
+date: 2023-01-01
+categories: [phonetics, F0, normalization, statistics, power]
+---
+
+Genette, J., Verhoeven, J., & Gillis, S. (2023). Fundamental frequency normalization and statistical power: An assessment of 15 normalizing techniques. In R. Skarnitzl & J. Volín (Eds.), *Proceedings of the 20th International Congress of Phonetic Sciences* (pp. 644–648). Guarant International.

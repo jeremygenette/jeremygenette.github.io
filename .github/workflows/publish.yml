@@ -1,0 +1,31 @@
+# Optional alternative to R/publish.R + gert: build & deploy the site
+# straight from GitHub Actions whenever you push .qmd changes to main.
+# You do not need this if you prefer the local R/gert workflow -- pick one.
+name: Render and deploy site
+
+on:
+  push:
+    branches: [main]
+    paths-ignore:
+      - "docs/**"
+
+permissions:
+  contents: write
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+
+      - name: Render site
+        run: quarto render
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: docs

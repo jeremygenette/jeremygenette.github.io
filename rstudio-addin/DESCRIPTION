@@ -1,0 +1,19 @@
+Package: sitepublish
+Type: Package
+Title: RStudio Addin to Build and Publish this Quarto Site
+Version: 0.1.0
+Authors@R: person("Jeremy", "Genette", role = c("aut", "cre"))
+Description: A tiny, single-project RStudio addin that renders the Quarto
+    website and pushes it to GitHub with {gert}, via a small Shiny gadget
+    that asks for a commit message. Not meant for CRAN -- install locally
+    from the project with devtools::install("rstudio-addin", quick = TRUE).
+License: MIT
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.3.1
+Imports:
+    gert,
+    quarto,
+    miniUI,
+    shiny,
+    rstudioapi

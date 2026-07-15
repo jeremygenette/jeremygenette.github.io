@@ -1,0 +1,9 @@
+---
+title: "Colouring the Illustration"
+author: "Jérémy Genette"
+subtitle: "Version 1.0"
+date: 2024-01-01
+categories: [software, phonology, phonetics, documentation, visualization]
+---
+
+Genette, J. (2024). Colouring the Illustration (Version 1.0) [Software]. https://jgenette.shinyapps.io/colouringtheillustrationapp/ 

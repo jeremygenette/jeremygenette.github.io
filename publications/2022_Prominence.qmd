@@ -1,0 +1,9 @@
+---
+title: "F0 dynamics associated with prominence realisation in children with hearing impairment"
+author: "Jérémy Genette, Jo Verhoeven"
+subtitle: ""
+date: 2022-11-01
+categories: [phonetics, prosody, hearing impairment, child language, Intrinsic Vowel Pitch]
+---
+
+Genette, J., & Verhoeven, J. (2022). F0 dynamics associated with prominence realisation in children with hearing impairment. *Stem-, Spraak- en Taalpathologie*, 27. https://doi.org/10.21827/32.8310/2022-SG-69

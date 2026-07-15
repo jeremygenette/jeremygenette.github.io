@@ -1,0 +1,9 @@
+---
+title: "The roast of GPT4o"
+author: "Jens Lemmens, Jérémy Genette, Tony Veale, Walter Daelemans"
+subtitle: "Experiments in generating, detecting and evaluating celebrity roast comedy"
+date: 2026-06-15
+categories: [AI, humour, perception]
+---
+
+Lemmens, J., **Genette, J.**, Veale, T., & Daelemans, W. (2026). **The roast of GPT4o: Experiments in generating, detecting and evaluating celebrity roast comedy**. In *Proceedings of the 2nd Workshop on Computational Humor (CHum 2026)* (pp. 65–71). Association for Computational Linguistics.

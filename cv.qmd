@@ -1,0 +1,149 @@
+---
+title: "CV"
+format:
+  html:
+    toc: true
+    toc-depth: 2
+---
+
+```{r}
+#| echo: false
+#| message: false
+source("R/cv_helpers.R")
+cv <- yaml::read_yaml("_data/cv_data.yml")
+
+# NOTE: glue::glue() trims trailing whitespace/newlines from its result
+# by default, so a trailing "\n" *inside* a glue template gets silently
+# dropped. We build each entry as a line with no trailing \n, then join
+# all lines for a section with "\n\n" and cat() the whole thing ONCE --
+# multiple separate cat() calls in a loop also aren't reliably a
+# newline apart once knitr collects the asis output, so one final
+# string is the safe way to get real paragraph breaks between entries.
+
+fmt_block <- function(entries) {
+  lines <- vapply(entries, function(e) {
+    place <- if (nzchar(e$place %||% "")) glue::glue(" — {e$place}") else ""
+    line <- glue::glue("**{e$dates}** · {e$title}{place}")
+    if (nzchar(e$detail %||% "")) line <- glue::glue("{line}  \n{e$detail}")
+    as.character(line)
+  }, character(1))
+  cat(paste(lines, collapse = "\n\n"), "\n")
+}
+
+fmt_collection <- function(df) {
+  if (nrow(df) == 0) { cat("_Nothing here yet._\n"); return(invisible()) }
+  lines <- vapply(seq_len(nrow(df)), function(i) {
+    d <- format_cv_date(df$date[i])
+    sub <- if (nzchar(df$subtitle[i])) glue::glue(" — {df$subtitle[i]}") else ""
+    line <- glue::glue("**{d}** · {df$title[i]}{sub}")
+    if (nzchar(df$body[i])) line <- glue::glue("{line}  \n{df$body[i]}")
+    as.character(line)
+  }, character(1))
+  cat(paste(lines, collapse = "\n\n"), "\n")
+}
+```
+
+A shorter, browsable version of my CV. For the full formatted document, [download the PDF ↓](assets/cv.pdf) — it's generated automatically from the same source files as this page.
+
+## Education
+
+```{r}
+#| echo: false
+#| output: asis
+fmt_block(cv$education)
+```
+
+## Academic positions
+
+```{r}
+#| echo: false
+#| output: asis
+fmt_block(cv$positions)
+```
+
+## Publications
+
+```{r}
+#| echo: false
+#| output: asis
+fmt_collection(read_collection("publications"))
+```
+
+## Invited talks
+
+```{r}
+#| echo: false
+#| output: asis
+talks <- read_collection("talks")
+fmt_collection(talks[has_category(talks$categories, "Invited talk"), ])
+```
+
+## Presentations
+
+```{r}
+#| echo: false
+#| output: asis
+fmt_collection(talks[!has_category(talks$categories, "Invited talk"), ])
+```
+
+## Teaching
+
+```{r}
+#| echo: false
+#| output: asis
+fmt_collection(read_collection("teaching"))
+```
+
+## Awards
+
+```{r}
+#| echo: false
+#| output: asis
+fmt_block(cv$awards)
+```
+
+## Grants
+
+```{r}
+#| echo: false
+#| output: asis
+fmt_block(cv$grants)
+```
+
+## Skills
+
+**IT** — Advanced: `r paste(cv$skills$it_advanced, collapse = ", ")`. Intermediate: `r paste(cv$skills$it_intermediate, collapse = ", ")`.
+
+```{r}
+#| echo: false
+#| output: asis
+lines <- vapply(cv$skills$languages, function(l) glue::glue("- **{l$language}**: {l$level}"), character(1))
+cat(paste(lines, collapse = "\n"), "\n")
+```
+
+## Additional training
+
+```{r}
+#| echo: false
+#| output: asis
+fmt_block(cv$training)
+```
+
+## Scientific affiliations
+
+```{r}
+#| echo: false
+#| output: asis
+cat(paste(unlist(cv$affiliations), collapse = ", "))
+```
+
+## References
+
+```{r}
+#| echo: false
+#| output: asis
+lines <- vapply(cv$references, function(r) {
+  glue::glue("- **{r$name}** — {r$place} — [{r$email}](mailto:{r$email})")
+}, character(1))
+cat(paste(lines, collapse = "\n"), "\n")
+```

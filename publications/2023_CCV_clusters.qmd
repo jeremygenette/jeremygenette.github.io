@@ -1,0 +1,9 @@
+---
+title: "Investigating overlapping gestures in acoustic signals"
+author: "Jérémy Genette"
+subtitle: "The case of fricatives and sonorants in clusters"
+date: 2023-01-01
+categories: [phonetics, coarticulation, fricatives, sonorants]
+---
+
+Genette, J. (2023). Investigating overlapping gestures in acoustic signals: The case of fricatives and sonorants in clusters. In R. Skarnitzl & J. Volín (Eds.), *Proceedings of the 20th International Congress of Phonetic Sciences* (pp. 2110–2114). Guarant International.

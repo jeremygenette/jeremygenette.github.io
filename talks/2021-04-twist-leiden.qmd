@@ -1,0 +1,6 @@
+---
+title: "Voice Quality and Language Attitudes: An Acoustic and Articulatory Study"
+subtitle: "T.W.I.S.T. Conference 2021, 15th Student Conference in Linguistics, Leiden, NL — Conference presentation"
+date: 2021-04-01
+categories: [Presentation, Voice quality, Language attitudes]
+---

@@ -1,0 +1,6 @@
+---
+title: "Behind the annotations: an investigation of the acoustic cues informing the transcription of pre-lexical vocalizations"
+subtitle: "Colloquium of the British Association of Academic Phoneticians 2024, Cardiff, UK — Conference presentation"
+date: 2024-03-01
+categories: [Presentation, Transcription, Acoustics]
+---

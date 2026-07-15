@@ -1,0 +1,9 @@
+---
+title: "Cue-weighting and (indivi)dual pathways to the acquisition of vowel height contrasts"
+author: "Jérémy Genette, Steven Gillis, Jo Verhoeven"
+subtitle: "The F0 and F1 routes"
+date: 2026-05-21
+categories: [phonetics, phonology, speech production, LabPhon, child language, Intrinsic Vowel Pitch]
+---
+
+**Genette, J.**, Gillis, S. & Verhoeven, J., (2026) “Cue-weighting and (indivi)dual pathways to the acquisition of vowel height contrasts: The F0 and F1 routes,” *Laboratory Phonology, 17*(1). https://doi.org/10.16995/labphon.17955

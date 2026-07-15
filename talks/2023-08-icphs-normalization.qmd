@@ -1,0 +1,6 @@
+---
+title: "Fundamental frequency normalization and statistical power: an assessment of 15 normalizing techniques"
+subtitle: "XXth International Congress of Phonetic Sciences, Prague, CZ — Conference presentation"
+date: 2023-08-02
+categories: [Presentation, F0 normalization, Statistics]
+---

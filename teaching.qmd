@@ -1,0 +1,15 @@
+---
+title: "Teaching"
+listing:
+  contents: teaching
+  type: default
+  sort: "date desc"
+  categories: true
+  sort-ui: [date, title]
+  filter-ui: true
+  fields: [title, subtitle, author, date, categories, description]
+  field-display-names:
+    subtitle: "Venue / type"
+  page-size: 12
+---
+

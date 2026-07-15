@@ -1,0 +1,9 @@
+---
+title: "It's All in the Details"
+author: "Jérémy Genette"
+subtitle: "The Phonetics of Phonological Categories in Early Speech Production"
+date: 2025-01-01
+categories: [phonetics, phonology, speech production, child language, PhD]
+---
+
+Genette, J. (2025). *It's All in the Details: The Phonetics of Phonological Categories in Early Speech Production* (Doctoral dissertation). University of Antwerp.

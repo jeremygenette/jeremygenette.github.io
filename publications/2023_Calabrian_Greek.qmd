@@ -1,0 +1,9 @@
+---
+title: "The interplay between linguistic hypotheses and self-identification needs"
+author: "Jérémy Genette"
+subtitle: "The case of Calabrian Greek"
+date: 2023-01-01
+categories: [sociolinguistics, language identity, Greek, historical linguistics]
+---
+
+Genette, J. (2023). The interplay between linguistic hypotheses and self-identification needs: The case of Calabrian Greek. In A. Ariño-Bizarro, N. López-Cortés, & D. Pascual (Eds.), *En torno al lenguaje: nuevas aportaciones al estudio lingüístico* (pp. 133–152). Prensas Universitarias de Zaragoza.

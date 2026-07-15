@@ -1,0 +1,67 @@
+---
+title: "Contact"
+---
+
+I welcome inquiries about research collaborations, student supervision, and speaking invitations.
+
+::: {.contact-grid}
+::: {.contact-item}
+<div class="contact-icon">✉️</div>
+<div>
+#### Email
+[jeremy.genette@uantwerpen.be](mailto:jeremy.genette@uantwerpen.be)<br>
+[jeremy.genette@hotmail.com](mailto:jeremy.genette@hotmail.com)
+</div>
+:::
+
+::: {.contact-item}
+<div class="contact-icon purple">🏛️</div>
+<div>
+#### Affiliation
+Postdoctoral Research Scientist<br>FWO / Universiteit Antwerpen, BE
+</div>
+:::
+
+::: {.contact-item}
+<div class="contact-icon">🔗</div>
+<div>
+#### Google Scholar
+[View Profile →](https://scholar.google.com/citations?user=4PhgZFcAAAAJ&hl=en)
+</div>
+:::
+
+::: {.contact-item}
+<div class="contact-icon purple">📚</div>
+<div>
+#### ResearchGate
+[View Profile →](https://www.researchgate.net/profile/Jeremy-Genette)
+</div>
+:::
+
+::: {.contact-item}
+<div class="contact-icon">🆔</div>
+<div>
+#### ORCID
+[0000-0002-1782-6656 →](https://orcid.org/0000-0002-1782-6656)
+</div>
+:::
+
+::: {.contact-item}
+<div class="contact-icon purple">📄</div>
+<div>
+#### Full CV
+[Download PDF ↓](assets/cv.pdf)
+</div>
+:::
+:::
+
+## References
+
+| Name | Affiliation | Email |
+|---|---|---|
+| Jo Verhoeven | City St George's, University of London (UK) | johan.verhoeven.1@city.ac.uk |
+| Steven Gillis | Universiteit Antwerpen (BE) | steven.gillis@uantwerpen.be |
+| Philippine Geelhand de Merxem | Université Libre de Bruxelles (BE) | philippine.geelhand.de.merxem@ulb.be |
+| Corrado Bellifemine | Université de Lorraine (FR) | corrado.bellifemine@univ-lorraine.fr |
+| Jasper Sim | Nanyang Technological University (SG) | jasper.sim@nie.edu.sg |
+| Reinhild Vandekerckhove | Universiteit Antwerpen (BE) | reinhild.vandekerckhove@uantwerpen.be |

@@ -1,0 +1,6 @@
+---
+title: "Investigating overlapping gestures in acoustic signals: the case of fricatives and sonorants in clusters"
+subtitle: "XXth International Congress of Phonetic Sciences, Prague, CZ — Conference presentation"
+date: 2023-08-01
+categories: [Presentation, Coarticulation, Clusters]
+---
