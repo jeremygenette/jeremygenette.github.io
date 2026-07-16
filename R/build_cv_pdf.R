@@ -1,46 +1,48 @@
 # ------------------------------------------------------------------------
 # build_cv_pdf.R
 #
-# Renders cv-pdf.qmd -- which reads publications/, talks/, teaching/ and
-# _data/cv_data.yml at render time -- into assets/cv.pdf. That's the same
-# file the "Download CV" button on index.qmd and contact.qmd links to, so
-# add a new talk/course/publication .qmd file, run this, and the PDF is
-# current -- no manual copy-paste between the site and the CV.
+# Renders assets/cv.pdf from publications/, talks/, teaching/ and
+# _data/cv_data.yml.
 #
-# Requires a working LaTeX install (TinyTeX is easiest):
-#   quarto::quarto_render() will call tinytex automatically if present.
-#   tinytex::install_tinytex()
-#   tinytex::tlmgr_install(c("tipa", "fontawesome5", "academicons",
-#                             "wrapfig", "longtable", "xurl"))
+# This used to render a cv-pdf.qmd through Quarto, but a document with a
+# different `format:` (pdf) living inside an `html` website project can
+# crash Quarto's live preview server (ServeRenderManager) when its file
+# watcher tries to hot-render it. To avoid that entirely, this now just
+# shells out to scripts/build_cv_pdf.py, which builds the LaTeX and runs
+# pdflatex directly -- completely outside Quarto's project system, so it
+# can never collide with `quarto preview` again.
+#
+# Requires: python3, the PyYAML package (`pip install pyyaml`), and a
+# TeX Live / MacTeX install providing `pdflatex` (plus the tipa, xurl,
+# wrapfig, longtable, geometry packages -- all present in a default
+# install).
 # ------------------------------------------------------------------------
 
-#' Render cv-pdf.qmd to assets/cv.pdf
+#' Render assets/cv.pdf via scripts/build_cv_pdf.py
 #'
-#' @param dest Destination path for the PDF. Default "assets/cv.pdf"
-#'   (what index.qmd and contact.qmd link to).
-#' @param quiet Passed to quarto::quarto_render()
-build_cv_pdf <- function(dest = "assets/cv.pdf", quiet = FALSE) {
-  if (!requireNamespace("quarto", quietly = TRUE)) {
-    stop("Package 'quarto' is required. Install with install.packages('quarto').")
+#' @param quiet Suppress the script's own progress messages
+build_cv_pdf <- function(quiet = FALSE) {
+  py <- Sys.which("python3")
+  if (!nzchar(py)) py <- Sys.which("python")
+  if (!nzchar(py)) {
+    warning("No python3/python found on PATH -- skipping cv.pdf rebuild. ",
+            "Install Python 3 + `pip install pyyaml`, or run ",
+            "scripts/build_cv_pdf.py manually once it's set up.")
+    return(invisible(FALSE))
   }
 
-  message("-> Rendering cv-pdf.qmd...")
-  quarto::quarto_render(input = "cv-pdf.qmd", output_file = "cv-pdf.pdf", quiet = quiet)
+  message("-> Rebuilding assets/cv.pdf (scripts/build_cv_pdf.py)...")
+  result <- system2(py, "scripts/build_cv_pdf.py",
+                     stdout = if (quiet) FALSE else "",
+                     stderr = if (quiet) FALSE else "")
 
-  produced <- "cv-pdf.pdf"
-  if (!file.exists(produced)) {
-    # some Quarto/pandoc versions place the output next to the .qmd
-    # regardless of output_file casing/extension quirks -- fall back to
-    # searching for the most recently modified pdf in the project root.
-    candidates <- list.files(".", pattern = "\\.pdf$", full.names = TRUE)
-    if (length(candidates) == 0) stop("Could not find the rendered PDF.")
-    produced <- candidates[which.max(file.mtime(candidates))]
+  if (!identical(result, 0L) || !file.exists("assets/cv.pdf")) {
+    warning("cv.pdf build failed or produced no output. Run ",
+            "`python3 scripts/build_cv_pdf.py` directly in a terminal to see the ",
+            "full pdflatex log.")
+    return(invisible(FALSE))
   }
 
-  dir.create(dirname(dest), showWarnings = FALSE, recursive = TRUE)
-  file.copy(produced, dest, overwrite = TRUE)
-  if (produced != dest && file.exists(produced)) file.remove(produced)
-
-  message("-> Wrote ", dest)
-  invisible(dest)
+  message("-> assets/cv.pdf is up to date.")
+  invisible(TRUE)
 }

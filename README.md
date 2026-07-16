@@ -65,31 +65,111 @@ copy between the site and the CV by hand. There's also `cv.qmd`, a
 shorter HTML "long CV" page on the site itself, built from the exact
 same source.
 
-**Two ways to build it -- pick whichever matches what you have installed:**
+**How to build it:** `R/build_cv_pdf.R` shells out to
+`scripts/build_cv_pdf.py`, which builds the LaTeX and runs `pdflatex`
+directly. This is what generated the `assets/cv.pdf` already in this
+template, and it's been test-rendered end-to-end. Needs a standard TeX
+Live/MacTeX install (`pdflatex`) and `pip install pyyaml`.
 
-1. **`scripts/build_cv_pdf.py`** (Python, no R/Quarto/TinyTeX-extras
-   needed) -- this is what generated the `assets/cv.pdf` already in
-   this template, and it's been test-rendered end-to-end with
-   `pdflatex`. Needs a standard TeX Live/MacTeX install (`pdflatex`)
-   and `pip install pyyaml`.
-   ```bash
-   python3 scripts/build_cv_pdf.py
-   ```
-2. **`R/build_cv_pdf.R`** (renders `cv-pdf.qmd` via Quarto/knitr) --
-   closer to the original hand-written CV's look, since it uses the
-   `fontawesome5`/`academicons` packages for the contact icons instead
-   of plain text labels. Needs those two extra LaTeX packages:
-   ```r
-   tinytex::install_tinytex()  # if you don't have TinyTeX yet
-   tinytex::tlmgr_install(c("tipa", "fontawesome5", "academicons",
-                             "wrapfig", "longtable", "xurl"))
-   source("R/build_cv_pdf.R"); build_cv_pdf()
-   ```
-   This one is called automatically by `build_site()`/`publish_site()`
-   and the *Build & Publish Site* addin. If you're using the Python
-   script instead, just re-run it manually before publishing (or drop
-   a call to it inside `build_site()` in `R/publish.R` — one line:
-   `system("python3 scripts/build_cv_pdf.py")`).
+```r
+source("R/build_cv_pdf.R"); build_cv_pdf()
+```
+```bash
+# equivalently, straight from a terminal:
+python3 scripts/build_cv_pdf.py
+```
+
+This is called automatically by `build_site()`/`publish_site()` and the
+*Build & Publish Site* addin, so the PDF stays current every time you
+publish.
+
+> An earlier version of this template rendered a `cv-pdf.qmd` through
+> Quarto instead. A document with a different `format:` (pdf) sitting
+> inside an `html` website project can crash Quarto's live preview
+> server when its file watcher tries to hot-render it
+> (`ServeRenderManager` / `Cannot read properties of undefined
+> (reading 'config')`). Switching to a plain Python + `pdflatex` script
+> sidesteps Quarto's project system entirely, so this can't happen
+> again -- if you'd still rather use LaTeX packages like
+> `fontawesome5`/`academicons` for nicer icons (the original hand-written
+> CV used them), you can adapt `scripts/build_cv_pdf.py`'s LaTeX template
+> freely; it's a plain string, no Quarto involved.
+
+## Auto-push on render
+
+`_quarto.yml` wires up `R/post_render_push.R` as a **post-render
+hook**, so every `quarto render` (from the terminal, from
+`quarto::quarto_render()`, or from `build_site()`/`publish_site()`/the
+*Build & Publish Site* addin) automatically stages, commits, and pushes
+to GitHub afterwards -- no separate publish step needed.
+
+> **Careful with `quarto preview`.** Preview also re-renders (and so
+> re-triggers this push) on every file save. If you're going to leave
+> `quarto preview` running while you edit, turn auto-push off first:
+> ```bash
+> QUARTO_AUTO_PUSH=false quarto preview
+> ```
+> Otherwise just edit normally and run `quarto render` (or the addin)
+> when you actually want to publish.
+
+Turn it off (one-off or permanently):
+```bash
+QUARTO_AUTO_PUSH=false quarto render        # one-off
+```
+```
+# permanently for this project: add to a .Renviron file in the project root
+QUARTO_AUTO_PUSH=false
+```
+
+Optional env vars: `QUARTO_AUTO_PUSH_MESSAGE`, `QUARTO_AUTO_PUSH_REMOTE`
+(default `origin`), `QUARTO_AUTO_PUSH_BRANCH` (default `main`). If
+you'd rather review changes before they go live instead of publishing
+on every render, turn auto-push off and use the *Build & Publish Site*
+addin / `publish_site()`, which always asks for a commit message first.
+
+## Deploying to GitHub Pages (and fixing a 404)
+
+1. Repo must be public (or GitHub Pro/Enterprise for a private repo
+   with Pages), named either `<username>.github.io` or anything else.
+2. **Settings → Pages → Source: "Deploy from a branch"**, Branch
+   `main`, Folder **`/docs`** (this template renders to `docs/` via
+   `output-dir: docs` in `_quarto.yml`, precisely so this simple setup
+   works with no GitHub Actions needed).
+3. Push at least once (`quarto render` with auto-push on, or
+   `publish_site()`, or plain `git push`) so `docs/index.html` actually
+   exists on `main`.
+4. Give it a minute, then visit `https://<username>.github.io/<repo>/`
+   (or `https://<username>.github.io/` if the repo is named
+   `<username>.github.io`).
+
+> Prefer GitHub Actions instead of committing `docs/` locally?
+> `.github/workflows/publish.yml` renders and deploys on every push to
+> `main`. If you use it, set Pages source to the `gh-pages` branch
+> instead of `/docs`, turn off `QUARTO_AUTO_PUSH` (see above) so you're
+> not rendering twice, and pick *one* of the two approaches -- not both.
+
+**If you get a 404 / "page not found":**
+- **Most common cause:** GitHub Pages runs Jekyll over your output by
+  default, and Jekyll silently drops files/folders starting with `_`
+  (Quarto uses several, e.g. its internal libs folders) -- this often
+  breaks or blanks pages without an obvious error. Fixed by the
+  `.nojekyll` file at the project root, which `_quarto.yml`'s
+  `project: resources:` now copies into `docs/` on every render. If
+  you're not seeing it in `docs/` after rendering, check that
+  `.nojekyll` (yes, a dot-file with nothing but that name) still exists
+  at the project root.
+- Check **Settings → Pages** shows the branch/folder above and a green
+  "Your site is live at ..." message, not a warning.
+- Check the **Actions** tab / the small "pages build and deployment"
+  check next to your latest commit for a build error.
+- Confirm `docs/index.html` actually exists in the repo on GitHub (not
+  just locally) -- if `render` failed partway through, some pages won't
+  have made it into the commit.
+- URL casing/trailing slash matters for sub-pages
+  (`/talks.html` not `/talks`); make sure `site-url` in `_quarto.yml`
+  matches the real URL so Open Graph/canonical links aren't wrong.
+- Hard-refresh / try an incognito window -- GitHub Pages' CDN can cache
+  an old 404 for a few minutes after the first successful deploy.
 
 ## Fixes applied after testing against a live render
 
@@ -114,10 +194,15 @@ same source.
   together; and inline R code needs `` `r expr` `` (no curly braces --
   those are only for chunk fences, not inline code). Both are fixed.
 - **"Download CV" button 404ing.** There was no real `assets/cv.pdf` in
-  the repo -- it only gets created by running one of the two build
-  steps above. This template now ships with a real, pre-built
-  `assets/cv.pdf` (via the Python script) so the link works out of the
-  box; regenerate it any time your content changes.
+  the repo -- it only gets created by running the build step above.
+  This template now ships with a real, pre-built `assets/cv.pdf` so the
+  link works out of the box; regenerate it any time your content changes.
+- **Quarto preview crashing with `Cannot read properties of undefined
+  (reading 'config')`.** Caused by `cv-pdf.qmd` (a `pdf`-format document
+  sitting inside the `html` website project) getting caught by the live
+  preview's file watcher. Removed that file; the CV is now built by a
+  plain Python script instead (see above), fully outside Quarto's
+  project system.
 
 ## Setup
 
@@ -149,26 +234,6 @@ devtools::install("rstudio-addin", quick = TRUE)
 Restart RStudio. You'll now see **Build & Publish Site** and
 **New Site Entry** under the Addins menu (bind them to keyboard
 shortcuts via Tools → Modify Keyboard Shortcuts if you like).
-
-## Publishing to GitHub Pages
-
-This template writes rendered HTML to `docs/` (set via `output-dir` in
-`_quarto.yml`), so the simplest GitHub Pages setup works: create/rename
-your repo to `<username>.github.io`, push, then in
-**Settings → Pages** set *Source: Deploy from branch*, branch `main`,
-folder `/docs`.
-
-Two ways to publish:
-
-**A. From RStudio (recommended, uses `{gert}`)**
-- Addins → *Build & Publish Site* → type a commit message → Done.
-- Or from the console: `source("R/publish.R"); publish_site("Add new talk")`
-
-**B. From GitHub Actions (`.github/workflows/publish.yml`)**
-- Push `.qmd` changes to `main`; Actions renders and deploys automatically.
-- If you use this, set Pages source to the `gh-pages` branch instead of
-  `/docs`, and you no longer need to commit `docs/` locally — pick
-  *one* of A or B, not both, to avoid conflicting deploys.
 
 ## Notes on migration from the Jekyll site
 

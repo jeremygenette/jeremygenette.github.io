@@ -1,10 +1,13 @@
 project:
   type: website
   output-dir: docs                 # GitHub Pages can serve straight from /docs on main
+  resources:
+    - ".nojekyll"                  # copied into docs/ every render -- tells GitHub Pages to skip Jekyll
   render:
     - "*.qmd"
     - "!R/"
-    - "!cv-pdf.qmd"   # rendered on demand by R/build_cv_pdf.R -> assets/cv.pdf, not part of the normal site build
+  post-render:
+    - "Rscript R/post_render_push.R"   # auto-push after every render -- opt out with QUARTO_AUTO_PUSH=false
 
 website:
   title: "Jérémy Genette"
