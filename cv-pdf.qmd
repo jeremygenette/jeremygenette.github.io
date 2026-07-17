@@ -16,7 +16,7 @@ format:
         \usepackage{longtable}
         \usepackage{graphicx}
         \renewcommand*{\arraystretch}{1.15}
-        \setlength{\bibitemsep}{0.6\baselineskip}
+        
     keep-tex: false
 execute:
   echo: false

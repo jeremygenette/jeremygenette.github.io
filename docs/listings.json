@@ -1,0 +1,67 @@
+[
+  {
+    "listing": "/publications.html",
+    "items": [
+      "/publications/2026_roast.html",
+      "/publications/2026_LabPhon.html",
+      "/publications/2025-phd-thesis.html",
+      "/publications/2024_colouring_the_illustration.html",
+      "/publications/2023_CCV_clusters.html",
+      "/publications/2023_Calabrian_Greek.html",
+      "/publications/2023_SVC.html",
+      "/publications/2023_Speech_communication.html",
+      "/publications/2023_normalization.html",
+      "/publications/2022_Prominence.html"
+    ]
+  },
+  {
+    "listing": "/teaching.html",
+    "items": [
+      "/teaching/2026-phonetics-phonology-kuleuven.html",
+      "/teaching/2025-wroclaw-guest-lecture.html",
+      "/teaching/2025-linguistique-generale-mons.html",
+      "/teaching/2025-orthographe-mons.html",
+      "/teaching/2024-mannheim-phonetics-seminar.html",
+      "/teaching/2024-mannheim-quantitative-seminar.html",
+      "/teaching/2024-ba-thesis-uantwerpen.html",
+      "/teaching/2021-english-linguistics-2-ulb.html",
+      "/teaching/2021-english-linguistics-1-ulb.html",
+      "/teaching/2021-linguistique-generale-theorique-ulb.html",
+      "/teaching/2019-linguistique-generale-concepts-ulb.html"
+    ]
+  },
+  {
+    "listing": "/talks.html",
+    "items": [
+      "/talks/2025-10-fas-linguists-day.html",
+      "/talks/2025-09-invited-city-london.html",
+      "/talks/2025-09-cls-reading.html",
+      "/talks/2024-07-iascl-prague.html",
+      "/talks/2024-05-invited-mannheim.html",
+      "/talks/2024-03-baap-cardiff.html",
+      "/talks/2023-11-tok-utrecht.html",
+      "/talks/2023-10-linguists-day-antwerp.html",
+      "/talks/2023-10-many-paths-nijmegen.html",
+      "/talks/2023-08-icphs-normalization.html",
+      "/talks/2023-08-icphs-clusters.html",
+      "/talks/2023-06-icep-vigo.html",
+      "/talks/2022-12-fonetiek-utrecht.html",
+      "/talks/2022-10-linguists-day-liege.html",
+      "/talks/2021-09-zaragoza.html",
+      "/talks/2021-04-twist-leiden.html",
+      "/talks/2020-04-twist-leiden-cancelled.html"
+    ]
+  },
+  {
+    "listing": "/service.html",
+    "items": [
+      "/service/research-unplugged.html"
+    ]
+  },
+  {
+    "listing": "/projects.html",
+    "items": [
+      "/projects/example-project.html"
+    ]
+  }
+]
