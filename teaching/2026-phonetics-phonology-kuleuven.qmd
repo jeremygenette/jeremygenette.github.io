@@ -1,7 +1,7 @@
 ---
 title: "Phonetics and Phonology"
 subtitle: "KU Leuven, BE — University lecturer, graduate level"
-date: 2026-03-01
+period: 2026-present 
 categories: [Phonetics, Phonology, Graduate]
 ---
 

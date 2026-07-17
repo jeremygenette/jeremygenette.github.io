@@ -3,11 +3,11 @@ title: "Teaching"
 listing:
   contents: teaching
   type: default
-  sort: "date desc"
+  sort: "period desc"
   categories: true
-  sort-ui: [date, title]
+  sort-ui: [period, title]
   filter-ui: true
-  fields: [title, subtitle, author, date, categories, description]
+  fields: [title, subtitle, author, period, categories, description]
   field-display-names:
     subtitle: "Venue / type"
   page-size: 12
