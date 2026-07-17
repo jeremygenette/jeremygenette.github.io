@@ -1,6 +1,6 @@
 ---
-title: "Franse taalkunde I *[French Linguistics I]*"
-subtitle: "KU Leuven, BE — BA1 6 ECTS"
+title: "Franse taalkunde I "
+subtitle: "*French Linguistics I* — KU Leuven, BE — BA1 4 ECTS"
 date: 2026-03-01
 period: 2026-present
 categories: [French, introduction, phonetics, phonology, morphology]
