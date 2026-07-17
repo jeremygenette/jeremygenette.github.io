@@ -7,9 +7,10 @@ listing:
   categories: true
   sort-ui: [date, title]
   filter-ui: true
-  fields: [title, subtitle, author, date, categories, description]
+  fields: [title, subtitle, author, date, period, categories, description]
   field-display-names:
     subtitle: "Venue / type"
   page-size: 12
+  date-format: "YYYY"
 ---
 

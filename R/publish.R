@@ -12,7 +12,7 @@
 #   publish_site("Update talks page")
 #
 # ------------------------------------------------------------------------
-
+tinytex::tlmgr_install(c("tipa", "fontawesome5", "academicons", "xcolor", "xurl", "wrapfig", "longtable"))
 #' Render the Quarto website
 #'
 #' @param quiet Passed to quarto::quarto_render()

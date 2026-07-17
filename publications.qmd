@@ -11,5 +11,6 @@ listing:
   field-display-names:
     subtitle: "Venue / type"
   page-size: 12
+  date-format: "YYYY"
 ---
 
