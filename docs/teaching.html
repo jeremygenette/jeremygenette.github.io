@@ -72,7 +72,7 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-title','listing-subtitle','listing-author','listing-period','listing-categories','listing-description',{ data: ['index'] },{ data: ['categories'] }],
+      valueNames: ['listing-title','listing-subtitle','listing-author','listing-date','listing-period','listing-categories','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] }],
       
       searchColumns: ["listing-date","listing-title","listing-author","listing-subtitle","listing-image","listing-description","listing-categories"],
     };
@@ -225,8 +225,11 @@ ul.task-list li input[type="checkbox"] {
      <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
        <option value="" disabled="" selected="" hidden="">Order By</option>
        <option value="index" data-direction="asc">Default</option>
-         <option value="listing-period" data-direction="asc">
-          period
+         <option value="listing-date-sort" data-direction="asc">
+          Date - Oldest
+        </option>
+         <option value="listing-date-sort" data-direction="desc">
+          Date - Newest
         </option>
          <option value="listing-title" data-direction="asc">
           Title
@@ -239,302 +242,7 @@ ul.task-list li input[type="checkbox"] {
     </div>
 </div>
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="General Linguistics,Undergraduate" data-listing-date-sort="1567288800000" data-listing-file-modified-sort="1784099102000" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
-<div class="body">
-<a href="./teaching/2019-linguistique-generale-concepts-ulb.html">
-<h3 class="no-anchor listing-title">
-Linguistique générale: concepts et méthodes [General Linguistics: Concepts and Methods]
-</h3>
-<div class="listing-subtitle">
-Université Libre de Bruxelles, BE — Student assistant, undergraduate level
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('General Linguistics'); return false;">
-General Linguistics
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Undergraduate'); return false;">
-Undergraduate
-</div>
-</div>
-<a href="./teaching/2019-linguistique-generale-concepts-ulb.html">
-<div class="listing-description">
-Student assistant: Phonetics, Phonology, Morphology and Syntax. Falls 2019 &amp; 2020.
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./teaching/2019-linguistique-generale-concepts-ulb.html"> </a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="English Linguistics,Undergraduate" data-listing-date-sort="1630447200000" data-listing-file-modified-sort="1784099102000" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
-<div class="body">
-<a href="./teaching/2021-english-linguistics-1-ulb.html">
-<h3 class="no-anchor listing-title">
-Linguistique synchronique de l’anglais I [English Linguistics I]
-</h3>
-<div class="listing-subtitle">
-Université Libre de Bruxelles, BE — Undergraduate level
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('English Linguistics'); return false;">
-English Linguistics
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Undergraduate'); return false;">
-Undergraduate
-</div>
-</div>
-<a href="./teaching/2021-english-linguistics-1-ulb.html">
-<div class="listing-description">
-Design of online exercises in English linguistics. September–October 2021.
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./teaching/2021-english-linguistics-1-ulb.html"> </a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="English Linguistics,Undergraduate" data-listing-date-sort="1631656800000" data-listing-file-modified-sort="1784099102000" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
-<div class="body">
-<a href="./teaching/2021-english-linguistics-2-ulb.html">
-<h3 class="no-anchor listing-title">
-Linguistique synchronique de l’anglais II [English Linguistics II]
-</h3>
-<div class="listing-subtitle">
-Université Libre de Bruxelles, BE — Undergraduate level
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('English Linguistics'); return false;">
-English Linguistics
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Undergraduate'); return false;">
-Undergraduate
-</div>
-</div>
-<a href="./teaching/2021-english-linguistics-2-ulb.html">
-<div class="listing-description">
-Design of online exercises in English linguistics. September–October 2021.
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./teaching/2021-english-linguistics-2-ulb.html"> </a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="General Linguistics,Undergraduate" data-listing-date-sort="1612134000000" data-listing-file-modified-sort="1784099102000" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
-<div class="body">
-<a href="./teaching/2021-linguistique-generale-theorique-ulb.html">
-<h3 class="no-anchor listing-title">
-Linguistique générale: questions théoriques [General Linguistics: Theoretical Questions]
-</h3>
-<div class="listing-subtitle">
-Université Libre de Bruxelles, BE — Student assistant, undergraduate level
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('General Linguistics'); return false;">
-General Linguistics
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Undergraduate'); return false;">
-Undergraduate
-</div>
-</div>
-<a href="./teaching/2021-linguistique-generale-theorique-ulb.html">
-<div class="listing-description">
-Student assistant: Phonetics, Phonology, Morphology and Syntax. Spring 2021.
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./teaching/2021-linguistique-generale-theorique-ulb.html"> </a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="4" data-categories="BA thesis,Dutch phonetics,Undergraduate" data-listing-date-sort="1704063600000" data-listing-file-modified-sort="1784099102000" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
-<div class="body">
-<a href="./teaching/2024-ba-thesis-uantwerpen.html">
-<h3 class="no-anchor listing-title">
-Bachelorscriptie [BA Thesis]
-</h3>
-<div class="listing-subtitle">
-Universiteit Antwerpen, BE — Assessor, undergraduate level
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('BA thesis'); return false;">
-BA thesis
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Dutch phonetics'); return false;">
-Dutch phonetics
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Undergraduate'); return false;">
-Undergraduate
-</div>
-</div>
-<a href="./teaching/2024-ba-thesis-uantwerpen.html">
-<div class="listing-description">
-2024–present. Assessor of BA theses in Applied Linguistics related to the phonetics of Dutch.
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./teaching/2024-ba-thesis-uantwerpen.html"> </a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="5" data-categories="Phonetics,Guest lecture,Undergraduate" data-listing-date-sort="1715119200000" data-listing-file-modified-sort="1784099102000" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
-<div class="body">
-<a href="./teaching/2024-mannheim-phonetics-seminar.html">
-<h3 class="no-anchor listing-title">
-Phonetics and Phonology Seminar — guest lecture: “Intrinsic Vowel Pitch in Children”
-</h3>
-<div class="listing-subtitle">
-Universität Mannheim, DE — Guest lecture, undergraduate level
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Phonetics'); return false;">
-Phonetics
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Guest lecture'); return false;">
-Guest lecture
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Undergraduate'); return false;">
-Undergraduate
-</div>
-</div>
-<a href="./teaching/2024-mannheim-phonetics-seminar.html">
-<div class="listing-description">
-The acoustic analysis of a child speech corpus. 8 May 2024.
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./teaching/2024-mannheim-phonetics-seminar.html"> </a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="6" data-categories="Statistics,Guest lecture,Undergraduate" data-listing-date-sort="1715119200000" data-listing-file-modified-sort="1784099102000" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
-<div class="body">
-<a href="./teaching/2024-mannheim-quantitative-seminar.html">
-<h3 class="no-anchor listing-title">
-Linguistics: Quantitative Research Seminar — guest lecture in inferential statistics
-</h3>
-<div class="listing-subtitle">
-Universität Mannheim, DE — Guest lecture, undergraduate level
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Statistics'); return false;">
-Statistics
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Guest lecture'); return false;">
-Guest lecture
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Undergraduate'); return false;">
-Undergraduate
-</div>
-</div>
-<a href="./teaching/2024-mannheim-quantitative-seminar.html">
-<div class="listing-description">
-8 May 2024.
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./teaching/2024-mannheim-quantitative-seminar.html"> </a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="7" data-categories="General Linguistics,Undergraduate" data-listing-date-sort="1756677600000" data-listing-file-modified-sort="1784099102000" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
-<div class="body">
-<a href="./teaching/2025-linguistique-generale-mons.html">
-<h3 class="no-anchor listing-title">
-Linguistique générale [General Linguistics]
-</h3>
-<div class="listing-subtitle">
-Université de Mons, BE — University lecturer, undergraduate level
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('General Linguistics'); return false;">
-General Linguistics
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Undergraduate'); return false;">
-Undergraduate
-</div>
-</div>
-<a href="./teaching/2025-linguistique-generale-mons.html">
-<div class="listing-description">
-Fall 2025.
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./teaching/2025-linguistique-generale-mons.html"> </a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="8" data-categories="French,Orthography,Undergraduate" data-listing-date-sort="1756677600000" data-listing-file-modified-sort="1784099102000" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
-<div class="body">
-<a href="./teaching/2025-orthographe-mons.html">
-<h3 class="no-anchor listing-title">
-Orthographe lexicale et grammaticale [French Lexical and Grammatical Orthography]
-</h3>
-<div class="listing-subtitle">
-Université de Mons, BE — University lecturer, undergraduate level
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('French'); return false;">
-French
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Orthography'); return false;">
-Orthography
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Undergraduate'); return false;">
-Undergraduate
-</div>
-</div>
-<a href="./teaching/2025-orthographe-mons.html">
-<div class="listing-description">
-Fall 2025.
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./teaching/2025-orthographe-mons.html"> </a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="9" data-categories="Corpora,Guest lecture,Graduate" data-listing-date-sort="1761170400000" data-listing-file-modified-sort="1784099102000" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
-<div class="body">
-<a href="./teaching/2025-wroclaw-guest-lecture.html">
-<h3 class="no-anchor listing-title">
-Master’s Seminar — guest lecture: “Corpora en wetenschappelijk onderzoek in de taalkunde”
-</h3>
-<div class="listing-subtitle">
-Uniwersytet Wrocławski, PL — Guest lecture
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Corpora'); return false;">
-Corpora
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Guest lecture'); return false;">
-Guest lecture
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Graduate'); return false;">
-Graduate
-</div>
-</div>
-<a href="./teaching/2025-wroclaw-guest-lecture.html">
-<div class="listing-description">
-[Corpora and scientific research in linguistics] — 23 October 2025.
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./teaching/2025-wroclaw-guest-lecture.html"> </a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="10" data-categories="Phonetics,Phonology,Graduate" data-listing-file-modified-sort="1784307510364" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="0" data-categories="Phonetics,Phonology,Graduate" data-listing-date-sort="1772319600000" data-listing-file-modified-sort="1784307603809" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
 <div class="body">
 <a href="./teaching/2026-phonetics-phonology-kuleuven.html">
 <h3 class="no-anchor listing-title">
@@ -563,8 +271,346 @@ Spring 2026.
 </div>
 <div class="metadata">
 <a href="./teaching/2026-phonetics-phonology-kuleuven.html">
+<div class="listing-date">
+Mar 1, 2026
+</div>
 <div class="metadata-value listing-period">
 2026-present
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="1" data-categories="Corpora,Guest lecture,Graduate" data-listing-date-sort="1761170400000" data-listing-file-modified-sort="1784099102000" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="body">
+<a href="./teaching/2025-wroclaw-guest-lecture.html">
+<h3 class="no-anchor listing-title">
+Master’s Seminar — guest lecture: “Corpora en wetenschappelijk onderzoek in de taalkunde”
+</h3>
+<div class="listing-subtitle">
+Uniwersytet Wrocławski, PL — Guest lecture
+</div>
+</a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Corpora'); return false;">
+Corpora
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Guest lecture'); return false;">
+Guest lecture
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Graduate'); return false;">
+Graduate
+</div>
+</div>
+<a href="./teaching/2025-wroclaw-guest-lecture.html">
+<div class="listing-description">
+[Corpora and scientific research in linguistics] — 23 October 2025.
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./teaching/2025-wroclaw-guest-lecture.html">
+<div class="listing-date">
+Oct 23, 2025
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="2" data-categories="General Linguistics,Undergraduate" data-listing-date-sort="1756677600000" data-listing-file-modified-sort="1784099102000" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="body">
+<a href="./teaching/2025-linguistique-generale-mons.html">
+<h3 class="no-anchor listing-title">
+Linguistique générale [General Linguistics]
+</h3>
+<div class="listing-subtitle">
+Université de Mons, BE — University lecturer, undergraduate level
+</div>
+</a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('General Linguistics'); return false;">
+General Linguistics
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Undergraduate'); return false;">
+Undergraduate
+</div>
+</div>
+<a href="./teaching/2025-linguistique-generale-mons.html">
+<div class="listing-description">
+Fall 2025.
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./teaching/2025-linguistique-generale-mons.html">
+<div class="listing-date">
+Sep 1, 2025
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="3" data-categories="French,Orthography,Undergraduate" data-listing-date-sort="1756677600000" data-listing-file-modified-sort="1784099102000" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="body">
+<a href="./teaching/2025-orthographe-mons.html">
+<h3 class="no-anchor listing-title">
+Orthographe lexicale et grammaticale [French Lexical and Grammatical Orthography]
+</h3>
+<div class="listing-subtitle">
+Université de Mons, BE — University lecturer, undergraduate level
+</div>
+</a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('French'); return false;">
+French
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Orthography'); return false;">
+Orthography
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Undergraduate'); return false;">
+Undergraduate
+</div>
+</div>
+<a href="./teaching/2025-orthographe-mons.html">
+<div class="listing-description">
+Fall 2025.
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./teaching/2025-orthographe-mons.html">
+<div class="listing-date">
+Sep 1, 2025
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="4" data-categories="Phonetics,Guest lecture,Undergraduate" data-listing-date-sort="1715119200000" data-listing-file-modified-sort="1784099102000" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="body">
+<a href="./teaching/2024-mannheim-phonetics-seminar.html">
+<h3 class="no-anchor listing-title">
+Phonetics and Phonology Seminar — guest lecture: “Intrinsic Vowel Pitch in Children”
+</h3>
+<div class="listing-subtitle">
+Universität Mannheim, DE — Guest lecture, undergraduate level
+</div>
+</a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Phonetics'); return false;">
+Phonetics
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Guest lecture'); return false;">
+Guest lecture
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Undergraduate'); return false;">
+Undergraduate
+</div>
+</div>
+<a href="./teaching/2024-mannheim-phonetics-seminar.html">
+<div class="listing-description">
+The acoustic analysis of a child speech corpus. 8 May 2024.
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./teaching/2024-mannheim-phonetics-seminar.html">
+<div class="listing-date">
+May 8, 2024
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="5" data-categories="Statistics,Guest lecture,Undergraduate" data-listing-date-sort="1715119200000" data-listing-file-modified-sort="1784099102000" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="body">
+<a href="./teaching/2024-mannheim-quantitative-seminar.html">
+<h3 class="no-anchor listing-title">
+Linguistics: Quantitative Research Seminar — guest lecture in inferential statistics
+</h3>
+<div class="listing-subtitle">
+Universität Mannheim, DE — Guest lecture, undergraduate level
+</div>
+</a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Statistics'); return false;">
+Statistics
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Guest lecture'); return false;">
+Guest lecture
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Undergraduate'); return false;">
+Undergraduate
+</div>
+</div>
+<a href="./teaching/2024-mannheim-quantitative-seminar.html">
+<div class="listing-description">
+8 May 2024.
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./teaching/2024-mannheim-quantitative-seminar.html">
+<div class="listing-date">
+May 8, 2024
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="6" data-categories="BA thesis,Dutch phonetics,Undergraduate" data-listing-date-sort="1704063600000" data-listing-file-modified-sort="1784099102000" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="body">
+<a href="./teaching/2024-ba-thesis-uantwerpen.html">
+<h3 class="no-anchor listing-title">
+Bachelorscriptie [BA Thesis]
+</h3>
+<div class="listing-subtitle">
+Universiteit Antwerpen, BE — Assessor, undergraduate level
+</div>
+</a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('BA thesis'); return false;">
+BA thesis
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Dutch phonetics'); return false;">
+Dutch phonetics
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Undergraduate'); return false;">
+Undergraduate
+</div>
+</div>
+<a href="./teaching/2024-ba-thesis-uantwerpen.html">
+<div class="listing-description">
+2024–present. Assessor of BA theses in Applied Linguistics related to the phonetics of Dutch.
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./teaching/2024-ba-thesis-uantwerpen.html">
+<div class="listing-date">
+Jan 1, 2024
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="7" data-categories="English Linguistics,Undergraduate" data-listing-date-sort="1631656800000" data-listing-file-modified-sort="1784099102000" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="body">
+<a href="./teaching/2021-english-linguistics-2-ulb.html">
+<h3 class="no-anchor listing-title">
+Linguistique synchronique de l’anglais II [English Linguistics II]
+</h3>
+<div class="listing-subtitle">
+Université Libre de Bruxelles, BE — Undergraduate level
+</div>
+</a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('English Linguistics'); return false;">
+English Linguistics
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Undergraduate'); return false;">
+Undergraduate
+</div>
+</div>
+<a href="./teaching/2021-english-linguistics-2-ulb.html">
+<div class="listing-description">
+Design of online exercises in English linguistics. September–October 2021.
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./teaching/2021-english-linguistics-2-ulb.html">
+<div class="listing-date">
+Sep 15, 2021
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="8" data-categories="English Linguistics,Undergraduate" data-listing-date-sort="1630447200000" data-listing-file-modified-sort="1784099102000" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="body">
+<a href="./teaching/2021-english-linguistics-1-ulb.html">
+<h3 class="no-anchor listing-title">
+Linguistique synchronique de l’anglais I [English Linguistics I]
+</h3>
+<div class="listing-subtitle">
+Université Libre de Bruxelles, BE — Undergraduate level
+</div>
+</a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('English Linguistics'); return false;">
+English Linguistics
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Undergraduate'); return false;">
+Undergraduate
+</div>
+</div>
+<a href="./teaching/2021-english-linguistics-1-ulb.html">
+<div class="listing-description">
+Design of online exercises in English linguistics. September–October 2021.
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./teaching/2021-english-linguistics-1-ulb.html">
+<div class="listing-date">
+Sep 1, 2021
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="9" data-categories="General Linguistics,Undergraduate" data-listing-date-sort="1612134000000" data-listing-file-modified-sort="1784099102000" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="body">
+<a href="./teaching/2021-linguistique-generale-theorique-ulb.html">
+<h3 class="no-anchor listing-title">
+Linguistique générale: questions théoriques [General Linguistics: Theoretical Questions]
+</h3>
+<div class="listing-subtitle">
+Université Libre de Bruxelles, BE — Student assistant, undergraduate level
+</div>
+</a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('General Linguistics'); return false;">
+General Linguistics
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Undergraduate'); return false;">
+Undergraduate
+</div>
+</div>
+<a href="./teaching/2021-linguistique-generale-theorique-ulb.html">
+<div class="listing-description">
+Student assistant: Phonetics, Phonology, Morphology and Syntax. Spring 2021.
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./teaching/2021-linguistique-generale-theorique-ulb.html">
+<div class="listing-date">
+Feb 1, 2021
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="10" data-categories="General Linguistics,Undergraduate" data-listing-date-sort="1567288800000" data-listing-file-modified-sort="1784099102000" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="body">
+<a href="./teaching/2019-linguistique-generale-concepts-ulb.html">
+<h3 class="no-anchor listing-title">
+Linguistique générale: concepts et méthodes [General Linguistics: Concepts and Methods]
+</h3>
+<div class="listing-subtitle">
+Université Libre de Bruxelles, BE — Student assistant, undergraduate level
+</div>
+</a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('General Linguistics'); return false;">
+General Linguistics
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Undergraduate'); return false;">
+Undergraduate
+</div>
+</div>
+<a href="./teaching/2019-linguistique-generale-concepts-ulb.html">
+<div class="listing-description">
+Student assistant: Phonetics, Phonology, Morphology and Syntax. Falls 2019 &amp; 2020.
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./teaching/2019-linguistique-generale-concepts-ulb.html">
+<div class="listing-date">
+Sep 1, 2019
 </div>
 </a>
 </div>
