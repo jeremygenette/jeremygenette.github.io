@@ -1,0 +1,8 @@
+---
+title: "Linguistique française: français moderne"
+subtitle: "KU Leuven, BE — MA 6 ECTS"
+date: 2026-03-01
+period: 2026-present
+categories: [French, synchrony, methods]
+---
+
