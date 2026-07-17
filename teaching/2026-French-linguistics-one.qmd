@@ -1,5 +1,5 @@
 ---
-title: "Linguistique française: français moderne"
+title: "Franse taalkunde I *[French Linguistics I]*"
 subtitle: "KU Leuven, BE — BA1 6 ECTS"
 date: 2026-03-01
 period: 2026-present
