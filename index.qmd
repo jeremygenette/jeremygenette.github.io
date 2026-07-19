@@ -45,12 +45,12 @@ dialectology.
 ::: {.info-block}
 ### 🎓 Education
 <ul class="info-list">
-<li><strong>2021–2025</strong> · PhD in Linguistics — Universiteit Antwerpen, BE
+<li><strong>2021–2025</strong> · PhD in Linguistics — Universiteit Antwerpen, BE<br>
 Supervisors: Prof. Steven Gillis & Prof. Jo Verhoeven</li>
 <li><strong>2019–2021</strong> · MA in Linguistics — Université Libre de Bruxelles, BE<br>
 <em>summa cum laude</em></li>
 <li><strong>2016–2019</strong> · BA in Modern Languages and Letters (English–Italian) — Université Libre de Bruxelles, BE<br>
-Minor in Spanish · Erasmus at Università degli Studi Roma Tre, IT · <em>magna cum laude</em></li>
+ <em>magna cum laude</em> · Minor in Spanish · Erasmus at Università degli Studi Roma Tre, IT </li>
 </ul>
 :::
 
@@ -61,7 +61,7 @@ Minor in Spanish · Erasmus at Università degli Studi Roma Tre, IT · <em>magna
 <li><strong>2025–2026</strong> · University lecturer — KU Leuven, BE</li>
 <li><strong>2025–2026</strong> · University lecturer — Université de Mons, BE</li>
 <li><strong>2021–2025</strong> · PhD fellow — Universiteit Antwerpen, BE</li>
-<li><strong>Spring 2021</strong> · Research assistant — Université Libre de Bruxelles, BE (Autism in Context: phonetic transcription, PRAAT)</li>
+<li><strong>Spring 2021</strong> · Research assistant — Université Libre de Bruxelles, BE </li>
 <li><strong>2019–2021</strong> · Student-assistant — Université Libre de Bruxelles, BE</li>
 </ul>
 :::
