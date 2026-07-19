@@ -1,8 +1,11 @@
 ---
-title: "Linguistique synchronique de l'anglais I [English Linguistics I]"
-subtitle: "Université Libre de Bruxelles, BE — Undergraduate level"
+title: "Linguistique synchronique de l'anglais I"
+subtitle: "Université Libre de Bruxelles 🇧🇪 — BA1 BA2 Creation of online exercices"
 date: 2021-09-01
+period: 2021
 categories: [English Linguistics, Undergraduate]
 ---
 
-Design of online exercises in English linguistics. September–October 2021.
+English Linguistics I
+
+Design of online exercises in English linguistics

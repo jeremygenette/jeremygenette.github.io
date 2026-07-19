@@ -1,7 +1,8 @@
 ---
-title: "Linguistique générale: concepts et méthodes []"
-subtitle: "Université Libre de Bruxelles 🇧🇪 — Student-assistant, undergraduate level"
+title: "Linguistique générale: concepts et méthodes"
+subtitle: "Université Libre de Bruxelles 🇧🇪 — BA1,BA2 teaching assistance"
 date: 2019-09-01
+period: 2019-2021
 categories: [General Linguistics, Undergraduate, Phonetics, Phonology, Morphology, Syntax]
 ---
 
