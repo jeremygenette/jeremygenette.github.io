@@ -1,7 +1,7 @@
 ---
 title: "Linguists' day of the Linguistic Society of Belgium"
 subtitle: "Review"
-date: 2026-06-01
+date: 2023-10-03
 categories: [Conference, Chairing]
 ---
 
