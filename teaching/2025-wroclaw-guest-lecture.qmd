@@ -1,8 +1,10 @@
 ---
 title: "Master's Seminar — guest lecture: \"Corpora en wetenschappelijk onderzoek in de taalkunde\""
-subtitle: "Uniwersytet Wrocławski, PL — Guest lecture"
+subtitle: "Uniwersytet Wrocławski 🇵🇱 — Guest lecture"
 date: 2025-10-23
-categories: [Corpora, Guest lecture, Graduate]
+categories: [Corpora, Methods Guest lecture, Graduate]
 ---
 
-[Corpora and scientific research in linguistics] — 23 October 2025.
+*Corpora and scientific research in linguistics*
+
+Taught in Dutch
