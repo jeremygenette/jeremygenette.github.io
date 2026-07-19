@@ -1,6 +1,6 @@
 ---
-title: "23èmes Rencontres du Réseau Français de Phonologie"
-subtitle: "Réseau Français de Phonologie, Paris 🇫🇷"
+title: "Are Phonological Contrasts a Question of the Quantity of Phonetic Information? The Case of Intrinsic Vowel Pitch in Back and Front Vowels"
+subtitle: "23èmes Rencontres du Réseau Français de Phonologie, Paris 🇫🇷"
 date: 2026-07-02
 categories: [Poster, Phonology, LabPhon, Intrinsic F0]
 ---
