@@ -1,0 +1,6 @@
+---
+title: "23èmes Rencontres du Réseau Français de Phonologie"
+subtitle: "Réseau Français de Phonologie, Paris 🇫🇷"
+date: 2026-07-02
+categories: [Poster, Phonology, LabPhon, Intrinsic F0]
+---
